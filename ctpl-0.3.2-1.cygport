@@ -1,0 +1,11 @@
+inherit gnome2
+
+DESCRIPTION="C Template Parser Library"
+HOMEPAGE="http://ctpl.tuxfamily.org/"
+SRC_URI="http://download.tuxfamily.org/ctpl/releases/${P}.tar.gz"
+PATCH_URI="0.3.2-no-undefined.patch"
+
+PKG_NAMES="ctpl libctpl2 libctpl-devel"
+ctpl_CONTENTS="usr/bin/*.exe usr/share/doc/ usr/share/man/man1/"
+libctpl2_CONTENTS="usr/bin/*-2.dll"
+libctpl_devel_CONTENTS="usr/include/ usr/lib/ usr/share/gtk-doc/"
