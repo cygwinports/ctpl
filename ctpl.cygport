@@ -1,10 +1,10 @@
 inherit gnome2
 
 NAME="ctpl"
-VERSION=0.3.2
+VERSION=0.3.3
 RELEASE=1
 CATEGORY="Devel"
-SUMMARY="C Template Parser tool"
+SUMMARY="C template parser"
 DESCRIPTION="CTPL is a template library written in C. It allows fast and
 easy parsing of templates from many sources (including in-memory data and
 local and remote streaming, thanks to GIO) and fine control over template
@@ -13,7 +13,11 @@ HOMEPAGE="http://ctpl.tuxfamily.org/"
 SRC_URI="http://download.tuxfamily.org/ctpl/releases/ctpl-${VERSION}.tar.gz"
 PATCH_URI="0.3.2-no-undefined.patch"
 
-PKG_NAMES="ctpl libctpl2 libctpl-devel"
+PKG_NAMES="ctpl libctpl2 libctpl-devel libctpl-doc"
 ctpl_CONTENTS="usr/bin/*.exe usr/share/doc/ usr/share/man/man1/"
+libctpl2_CATEGORY="Libs"
 libctpl2_CONTENTS="usr/bin/*-2.dll"
-libctpl_devel_CONTENTS="usr/include/ usr/lib/ usr/share/gtk-doc/"
+libctpl_devel_CATEGORY="Libs"
+libctpl_devel_CONTENTS="usr/include/ usr/lib/"
+libctpl_doc_CATEGORY="Doc"
+libctpl_doc_CONTENTS="usr/share/gtk-doc/"
