@@ -11,7 +11,10 @@ local and remote streaming, thanks to GIO) and fine control over template
 parsing environment."
 HOMEPAGE="http://ctpl.tuxfamily.org/"
 SRC_URI="http://download.tuxfamily.org/ctpl/releases/ctpl-${VERSION}.tar.gz"
-PATCH_URI="0.3.2-no-undefined.patch"
+PATCH_URI="
+	0.3.2-no-undefined.patch
+	0.3.3-automake.patch
+"
 
 PKG_NAMES="ctpl libctpl2 libctpl-devel libctpl-doc"
 ctpl_CONTENTS="usr/bin/*.exe usr/share/doc/ usr/share/man/man1/"
